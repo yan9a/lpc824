@@ -2,14 +2,14 @@
 // File: ceTmr.c
 // Author: Yan Naing Aye
 // References:
-//    http://cool-emerald.blogspot.com/2010/06/soft-timer-module-for-8051.html
+//    http://cool-emerald.blogspot.com/2022/03/software-timers-and-ring-buffered-uart.html
 
 #ifndef CE_TMR_H
 #define CE_TMR_H
 #include <stdint.h>
 #include <stdbool.h>
 
-#define CE_TMR_MAX_NUMBER 10 // maximum number of timer
+#define CE_TMR_MAX_NUMBER 10 // maximum number of timers
 #define ceTmrTick SysTick_Handler // define timer tick function
 // to be called periodically
 //-----------------------------------------------------------------------------

@@ -1,9 +1,8 @@
-/*
- * ceRingBuf.c
- *
- *  Created on: 24/06/2021
- *      Author: YanA
- */
+// Description: Simple Ring buffer
+// File: ceRingBuf.c
+// Author: Yan Naing Aye
+// References:
+//    http://cool-emerald.blogspot.com/2022/03/software-timers-and-ring-buffered-uart.html
 #include "ceRingBuf.h"
 
 uint8_t _cerb_hm[CERB_SIZE]; // heap memory

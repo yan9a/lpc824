@@ -2,7 +2,7 @@
 // File: ceTmr.c
 // Author: Yan Naing Aye
 // References:
-//    http://cool-emerald.blogspot.com/2010/06/soft-timer-module-for-8051.html
+//    http://cool-emerald.blogspot.com/2022/03/software-timers-and-ring-buffered-uart.html
 
 //ceTmrTask() is to be polled regularly e.g., by main() loop
 //*****************************************************************************

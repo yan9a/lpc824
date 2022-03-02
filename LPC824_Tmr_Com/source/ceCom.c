@@ -2,8 +2,7 @@
 // File: ceCom.h
 // Author: Yan Naing Aye
 // References:
-//    http://cool-emerald.blogspot.com/2021/07/software-timers-and-ring-buffered-uart.html
-//    http://cool-emerald.blogspot.com/2010/06/circular-buffered-uart-com-module-for.html
+//    http://cool-emerald.blogspot.com/2022/03/software-timers-and-ring-buffered-uart.html
 
 #include "ceCom.h"
 #include "fsl_common.h"
