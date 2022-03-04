@@ -1,7 +1,7 @@
 /*
  * main.c
  *
- *  Description: arrow
+ *  Description: simple timer and comm
  *      Author: yanna
  */
 
