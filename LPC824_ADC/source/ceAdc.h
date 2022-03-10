@@ -1,5 +1,5 @@
 // Description: ADC sampling in sequence for LPC824
-// File: ceAdc.
+// File: ceAdc.h
 // Author: Yan Naing Aye
 // References:
 //    http://cool-emerald.blogspot.com
