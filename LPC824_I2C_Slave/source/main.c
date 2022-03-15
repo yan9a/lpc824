@@ -1,7 +1,7 @@
 /*
  * main.c
  *
- *  Description: SPI slave
+ *  Description: I2C Slave
  *      Author: yanna
  */
 
@@ -9,7 +9,7 @@
 #include "board.h"
 #include "ceTmr.h"
 #include "ceCom.h"
-#include "ceSpiSlave.h"
+#include "ceI2cSlave.h"
 
 #define BOARD_LED_PORT 0U
 #define BOARD_LED_PIN  12U
@@ -23,9 +23,10 @@ void ceComOnRx0(uint8_t b)
 	ceComPutch(0,b);
 }
 
-void ceSpiSlaveOnRx(uint8_t b)
+void ceI2cSlaveCB(void* p)
 {
-	ceComPutch(0,b);
+	// ceComPutch(0,*(char*)p);
+	ceComPrintHex(0,*(char*)p);
 }
 
 int main(void)
@@ -43,14 +44,14 @@ int main(void)
 	ceTmrStart(sbyLED); // start the standby led timer
 	//-----------------------------------------------------------------------------
 	ceComInitialize();// Init UART
-	ceComPrint(0,"SPI Slave Eg\n");
+	ceComPrint(0,"I2c slave demo\n");
 	//-----------------------------------------------------------------------------
-	ceSpiSlaveInit(ceSpiSlaveOnRx);// Init SPI slave
+	ceI2cSlaveInit(ceI2cSlaveCB); // Init I2c slave
 	//-----------------------------------------------------------------------------
     while (1)
     {
     	ceTmrTask();
     	ceComTask();
-    	ceSpiSlaveTask();
+    	ceI2cSlaveTask();
     }
 }
